@@ -43,5 +43,5 @@ DEPENDENCIES
   asciidoctor (~> 1.5)
   coderay (~> 1.1)
   jekyll (~> 3.1)
-  jekyll-asciidoc
+  jekyll-asciidoc (~> 1.0)
   rake-jekyll (~> 1.1)
