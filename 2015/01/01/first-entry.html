@@ -14,8 +14,8 @@
     <meta name="author" content="ZURB, inc. ZURB network also includes zurb.com"/>
     <meta name="copyright" content="ZURB, inc. Copyright (c) 2015"/>
 
-    <link rel="stylesheet" href="css/foundation.css"/>
-    <script src="js/vendor/modernizr.js"></script>
+    <link rel="stylesheet" href="../../../css/foundation.css"/>
+    <script src="../../../js/vendor/modernizr.js"></script>
 </head>
 <body>
 
@@ -63,97 +63,22 @@
     <!-- Main Blog Content -->
     <div class="large-9 columns" role="content">
 
-        <div class="sect1">
-<h2 id="deploy_site_to_github_pages">Deploy site to GitHub Pages</h2>
-<div class="sectionbody">
+        <div class="sect2">
+<h3 id="example_entry">Example entry</h3>
 <div class="paragraph">
-<p>GitHub doesn’t (yet) whitelist the AsciiDoc plugin, so you can only run it on your own machine… or use a continuous integration platform like <a href="https://travis-ci.org/">Travis CI</a>.</p>
-</div>
-<div class="paragraph">
-<p>You need two branches in your repository:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><strong>master</strong> for markup sources and configuration (may be named differently),</p>
-</li>
-<li>
-<p><strong>gh-pages</strong> for generated static content (will be created automatically for you).</p>
-</li>
-</ul>
+<p>Lorem ipsum dolor sit amet, et elitr docendi officiis vix. An has impedit concludaturque, an vim dicam feugiat nominavi. Veniam oblique menandri sea ea, agam novum appareat in his. Constituto posidonium te his. Pri quot iudico ex, noster apeirian concludaturque mel cu.</p>
 </div>
 <div class="paragraph">
-<p>The goal is to configure Travis CI job to listen for commits on the <em>master</em> branch, automatically run jekyll build and push the generated content to the <em>gh-pages</em> branch.</p>
+<p>Ocurreret salutatus scribentur ne est, quo nostrud scriptorem ex, vis ea cetero labores delicatissimi. Quis viris nullam ea pri, vim solum lobortis eu. Augue intellegat interpretaris eum ei. Ludus integre id qui, cu ludus partiendo interpretaris cum. At cibo mentitum his, ei vero accusamus qui. At ius iudico postea platonem, no vim efficiendi efficiantur, ea mea reprimique percipitur liberavisse.</p>
 </div>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>Install travis gem:</p>
-<div class="literalblock">
-<div class="content">
-<pre>$ gem install travis</pre>
+<div class="paragraph">
+<p>Altera eruditi nam et, in vim veniam option probatus. Ei delicata adolescens quo. Iriure salutatus constituam an vix, ex mei aliquip persius oporteat. Id decore molestiae eam, at essent gubergren percipitur ius. Mea et probo laboramus, tibique ocurreret ea ius.</p>
 </div>
+<div class="paragraph">
+<p>Tale vide scripserit pro id. Habeo latine percipit et mea, eos at nusquam principes conclusionemque. Ei possim eirmod euripidis his. Ei his veri choro, omnesque vituperata theophrastus nec no.</p>
 </div>
-</li>
-<li>
-<p>Enable Travis CI for your Jekyll repository:</p>
-<div class="olist loweralpha">
-<ol class="loweralpha" type="a">
-<li>
-<p>open your <a href="https://travis-ci.org/profile/">profile page</a> on Travis,</p>
-</li>
-<li>
-<p>find the repository and turn on the switch,</p>
-</li>
-<li>
-<p>then click on repository settings (next to the switch) and enable “Build only if .travis.yml is present.”</p>
-</li>
-</ol>
-</div>
-</li>
-<li>
-<p>Generate a new personal access token on GitHub:</p>
-<div class="olist loweralpha">
-<ol class="loweralpha" type="a">
-<li>
-<p>open <a href="https://github.com/settings/tokens/new">this page</a> to generate a new personal access token,</p>
-</li>
-<li>
-<p>select the scope <em>public_repo</em>, fill some description and confirm.</p>
-</li>
-</ol>
-</div>
-</li>
-<li>
-<p>Encrypt the token and add it to your <code>.travis.yml</code>:</p>
-<div class="olist loweralpha">
-<ol class="loweralpha" type="a">
-<li>
-<p>replace <code>&lt;token&gt;</code> with the GitHub token and execute:</p>
-<div class="literalblock">
-<div class="content">
-<pre>$ travis encrypt GH_TOKEN=&lt;token&gt; --add env.global</pre>
-</div>
-</div>
-</li>
-<li>
-<p>and check that it added something like the following to <code>.travis.yml</code>:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="CodeRay highlight"><code data-lang="yaml"><span class="key">env</span>:
-  <span class="key">global</span>:
-    <span class="key">secure</span>: <span class="string"><span class="content">YOUR-ENCRYPTED-TOKEN</span></span></code></pre>
-</div>
-</div>
-</li>
-</ol>
-</div>
-</li>
-<li>
-<p>Commit changes, push to GitHub and check that Travis has started the job and finished it successfully.</p>
-</li>
-</ol>
-</div>
+<div class="paragraph">
+<p>In quo debet iriure adolescens, nec molestie accusata ad, sea te malis atomorum petentium. Convenire corrumpit id vis, ad accumsan interesset usu. Esse dictas sea ne. Cum constituto deterruisset no, vim laudem doctus at. Nam dicat zril ea, mei omnesque explicari pertinacia ea. Nihil dicunt aliquam nam ne.</p>
 </div>
 </div>
 
@@ -200,13 +125,13 @@
     </div>
 </footer>
 
-<script src="js/vendor/jquery.js"></script>
-<script src="js/foundation.min.js"></script>
+<script src="../../../js/vendor/jquery.js"></script>
+<script src="../../../js/foundation.min.js"></script>
 <script>
     $(document).foundation();
 </script>
-<script src="js/vendor/jquery.js"></script>
-<script src="js/foundation/foundation.js"></script>
+<script src="../../../js/vendor/jquery.js"></script>
+<script src="../../../js/foundation/foundation.js"></script>
 <script>
     $(document).foundation();
 
