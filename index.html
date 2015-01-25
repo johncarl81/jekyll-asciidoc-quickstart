@@ -15,6 +15,8 @@
     <meta name="copyright" content="ZURB, inc. Copyright (c) 2015"/>
 
     <link rel="stylesheet" href="css/foundation.css"/>
+    <link rel="stylesheet" href="css/coderay.css"/>
+    <link rel="stylesheet" href="css/asciidoctor.css"/>
     <script src="js/vendor/modernizr.js"></script>
 </head>
 <body>
@@ -22,37 +24,35 @@
 
 <!-- Nav Bar -->
 
-<div class="row">
-    <nav class="top-bar" data-topbar>
-        <ul class="title-area">
-            <!-- Title Area -->
-            <li class="name">
-                <h1>
-                    <a href="">
-                        Jekyll-Asciidoc Quickstart
-                    </a>
-                </h1>
-            </li>
-            <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
-        </ul>
+<nav class="top-bar" data-topbar>
+    <ul class="title-area">
+        <!-- Title Area -->
+        <li class="name">
+            <h1>
+                <a href="">
+                    Jekyll-Asciidoc Quickstart
+                </a>
+            </h1>
+        </li>
+        <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+    </ul>
 
-        <section class="top-bar-section">
-            <!-- Left Nav Section -->
-            <ul class="right">
-                <li class="divider"></li>
-                <li class="has-dropdown">
-                    <a class="active" href="#">Main Item 1</a>
-                    <ul class="dropdown">
-                        <li><label>Section Name</label></li>
-                        <li><a href="#" class="">Dropdown Level 1</a></li>
-                        <li><a href="#">Dropdown Option</a></li>
-                        <li><a href="#">Dropdown Option</a></li>
-                    </ul>
-                </li>
-            </ul>
-        </section>
-    </nav>
-</div>
+    <section class="top-bar-section">
+        <!-- Left Nav Section -->
+        <ul class="right">
+            <li class="divider"></li>
+            <li class="has-dropdown">
+                <a class="active" href="#">Main Item 1</a>
+                <ul class="dropdown">
+                    <li><label>Section Name</label></li>
+                    <li><a href="#" class="">Dropdown Level 1</a></li>
+                    <li><a href="#">Dropdown Option</a></li>
+                    <li><a href="#">Dropdown Option</a></li>
+                </ul>
+            </li>
+        </ul>
+    </section>
+</nav>
 <!-- End Nav -->
 
 
@@ -63,96 +63,58 @@
     <!-- Main Blog Content -->
     <div class="large-9 columns" role="content">
 
-        <div class="sect1">
-<h2 id="deploy_site_to_github_pages">Deploy site to GitHub Pages</h2>
+        <h1>Congratulations!</h1>
+<div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
-<p>GitHub doesn’t (yet) whitelist the AsciiDoc plugin, so you can only run it on your own machine… or use a continuous integration platform like <a href="https://travis-ci.org/">Travis CI</a>.</p>
+<p>You&#8217;ve successfully set up and deployed an Jekyll website powered by Asciidoc using the <a href="https://github.com/asciidoctor/jekyll-asciidoc-quickstart"><strong>Asciidoc-Jekyll-Quickstart</strong></a> project.  If everything is in order then changes to the Asciidoc content will be automatically published to your <code>gh_pages</code> branch and hosted via Jekyll and Github.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="what_do_i_do_now">What do I do now?</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Now that you&#8217;ve set up your website to run with Asciidoc you have a ton of options available to you.</p>
+</div>
+<div class="sect3">
+<h4 id="update_look_and_feel">Update Look and feel</h4>
+<div class="paragraph">
+<p>The layout provided with the <a href="https://github.com/asciidoctor/jekyll-asciidoc-quickstart">Jekyll-Asciidoc Quickstart</a> project is based on <a href="http://foundation.zurb.com">Foundation</a>, a responsive design css framework.  You&#8217;re free to update the layout by editing the <code>_layouts/default.html</code> file and css under the <code>css</code> directory.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="edit_content">Edit content</h4>
+<div class="paragraph">
+<p>Editing content is very simple.  The easiest way to update your blog is to clone your repository, fire up your favorite text editor and run the content locally.  To do this run the <code>jekyll serve</code> command and open a web browser to <a href="http://localhost:4000" class="bare">http://localhost:4000</a>.  Jekyll will automatically process and host changes to the content.</p>
 </div>
 <div class="paragraph">
-<p>You need two branches in your repository:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><strong>master</strong> for markup sources and configuration (may be named differently),</p>
-</li>
-<li>
-<p><strong>gh-pages</strong> for generated static content (will be created automatically for you).</p>
-</li>
-</ul>
+<p>You may also edit your content directly on Github.  To do this, navigate the browser the file you wish to edit, click the pensil (edit) button in the upper right hand corner of the view and make your changes.  When you&#8217;re finished, commit your changes.  This will trigger Travis to generate and publish a new website including your changes.</p>
 </div>
 <div class="paragraph">
-<p>The goal is to configure Travis CI job to listen for commits on the <em>master</em> branch, automatically run jekyll build and push the generated content to the <em>gh-pages</em> branch.</p>
+<p>For blog posts, Jekyll will recognize files under the <code>_post</code> directory, parse the name and place it in the list of posts.  These will show up under the <code>site.posts</code> variable.</p>
 </div>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>Install travis gem:</p>
-<div class="literalblock">
-<div class="content">
-<pre>$ gem install travis</pre>
+<div class="paragraph">
+<p>To display a list of posts, use Jekyll syntax similar to the following:</p>
 </div>
-</div>
-</li>
-<li>
-<p>Enable Travis CI for your Jekyll repository:</p>
-<div class="olist loweralpha">
-<ol class="loweralpha" type="a">
-<li>
-<p>open your <a href="https://travis-ci.org/profile/">profile page</a> on Travis,</p>
-</li>
-<li>
-<p>find the repository and turn on the switch,</p>
-</li>
-<li>
-<p>then click on repository settings (next to the switch) and enable “Build only if .travis.yml is present.”</p>
-</li>
-</ol>
-</div>
-</li>
-<li>
-<p>Generate a new personal access token on GitHub:</p>
-<div class="olist loweralpha">
-<ol class="loweralpha" type="a">
-<li>
-<p>open <a href="https://github.com/settings/tokens/new">this page</a> to generate a new personal access token,</p>
-</li>
-<li>
-<p>select the scope <em>public_repo</em>, fill some description and confirm.</p>
-</li>
-</ol>
-</div>
-</li>
-<li>
-<p>Encrypt the token and add it to your <code>.travis.yml</code>:</p>
-<div class="olist loweralpha">
-<ol class="loweralpha" type="a">
-<li>
-<p>replace <code>&lt;token&gt;</code> with the GitHub token and execute:</p>
-<div class="literalblock">
-<div class="content">
-<pre>$ travis encrypt GH_TOKEN=&lt;token&gt; --add env.global</pre>
-</div>
-</div>
-</li>
-<li>
-<p>and check that it added something like the following to <code>.travis.yml</code>:</p>
 <div class="listingblock">
 <div class="content">
-<pre class="CodeRay highlight"><code data-lang="yaml"><span class="key">env</span>:
-  <span class="key">global</span>:
-    <span class="key">secure</span>: <span class="string"><span class="content">YOUR-ENCRYPTED-TOKEN</span></span></code></pre>
+<pre class="CodeRay highlight"><code data-lang="html">{% for post in site.posts limit: 5 %}
+    <span class="tag">&lt;a</span> <span class="attribute-name">href</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">.{{ post.url }}</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>{{ post.shortTitle }}<span class="tag">&lt;/a&gt;</span>
+{% endfor %}</code></pre>
 </div>
 </div>
-</li>
-</ol>
 </div>
-</li>
-<li>
-<p>Commit changes, push to GitHub and check that Travis has started the job and finished it successfully.</p>
-</li>
-</ol>
+<div class="sect3">
+<h4 id="reference_documentation">Reference documentation</h4>
+<div class="paragraph">
+<p>The following links will help with detailed explanations on Jekyll and Asciidoc.</p>
+</div>
+<div class="paragraph">
+<p><a href="http://jekyllrb.com">Jekyll</a><br>
+<a href="http://asciidoctor.org/docs/asciidoc-syntax-quick-reference/">Asciidoc Quick Reference</a><br>
+<a href="http://asciidoctor.org">Asciidoctor</a></p>
+</div>
 </div>
 </div>
 </div>
